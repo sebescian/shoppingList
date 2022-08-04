@@ -1,0 +1,192 @@
+:root {
+  --darkest: #111827;
+  --light: #eee;
+  --pistachio: #9bbe0f;
+  --sunny: #ffc400;
+  --danger: #ff0000;
+  --purple: #8b5cf6;
+  --shadow: 0px 2px 5px #c3c3c3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--light) url(/assets/background.jpg);
+  background-blend-mode: screen;
+}
+
+header {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+#newShoppingList {
+  display: flex;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#newItemInput {
+  flex: 1 1 0%;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  font-style: italic;
+}
+
+#newItemSubmit {
+  color: var(--light);
+  background-color: var(--pistachio);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+#newItemSubmit:hover {
+  opacity: 0.9;
+}
+
+#listReset {
+  color: var(--light);
+  background-color: var(--danger);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+#listReset:hover {
+  opacity: 0.9;
+}
+
+main {
+  -webkit-animation: menu 600ms 1 linear;
+          animation: menu 600ms 1 linear;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: 6rem;
+  flex: 1 1 0%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+@-webkit-keyframes menu {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 3rem;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    position: relative;
+    top: 3rem;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.shoppingList {
+  padding: 1rem;
+}
+.shoppingList h2 {
+  font-size: 1.5rem;
+}
+
+#items .item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#items .item .content .text {
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+}
+#items .item .content .text:not(:-moz-read-only) {
+  color: var(--pistachio);
+}
+#items .item .content .text:not(:read-only) {
+  color: var(--pistachio);
+}
+#items .item .actions {
+  display: flex;
+  margin: 0 -0.5rem;
+}
+#items .item .actions button {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+#items .item .actions .edit {
+  color: var(--pistachio);
+}
+#items .item .actions .save {
+  color: var(--darkest);
+}
+#items .item .actions .delete {
+  color: var(--danger);
+}
+#items .item .actions .totalQuantity {
+  margin-right: 0.1rem;
+  align-items: center;
+  font-weight: 700;
+}
+#items .item .actions .plusSign,
+#items .item .actions .minusSign {
+  width: 1.5rem;
+  margin-right: 1rem;
+  align-items: center;
+  background-color: var(--sunny);
+  color: #fff;
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */
